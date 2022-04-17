@@ -1,19 +1,30 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
+import CustomLink from '../CustomLink/CustomLink';
+import './NavBar.css';
+import { Link } from 'react-router-dom';
+import logoDark from '../../../images/logo-dark.png'
 
 const NavBar = () => {
+
+
     return (
-        <Navbar collapseOnSelect expand="lg" bg="danger" variant="dark">
-            <Container>
-                <Navbar.Brand href="#home">React-Bootstrap</Navbar.Brand>
+        <Navbar className='navbar-container' collapseOnSelect expand="lg" variant="dark">
+            <Container >
+                <Navbar.Brand as={Link} to="/home">
+                    <img src={logoDark} alt="" />
+                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
                 <Navbar.Collapse id="responsive-navbar-nav">
                     <Nav className="me-auto">
                     </Nav>
-                    <Nav>
-                        <Nav.Link eventKey={2} >Blogs</Nav.Link>
-                        <Nav.Link eventKey={2}>
+                    <Nav >
+                        <Nav.Link as={CustomLink} to='/blogs' eventKey={2} >Blogs</Nav.Link>
+                        <Nav.Link as={CustomLink} to='/about' eventKey={2} >
                             About
+                        </Nav.Link>
+                        <Nav.Link as={CustomLink} to='/sign-in' eventKey={2} >
+                            Sign In
                         </Nav.Link>
                     </Nav>
                 </Navbar.Collapse>
