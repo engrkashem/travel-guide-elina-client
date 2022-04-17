@@ -1,0 +1,10 @@
+.footer-container {
+    margin: 0;
+    background-color: rgba(0, 0, 0, 0.9);
+    color: rgba(255, 255, 255, 0.664);
+    padding: 20px;
+}
+
+.footer-container button {
+    color: rgba(255, 255, 255, 0.664);
+}

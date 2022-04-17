@@ -16,7 +16,7 @@ const Slider = () => {
                     />
                     <Carousel.Caption>
                         <h1>LONDON</h1>
-                        <Button>Explore Europe</Button>
+                        <Button variant='danger rounded-pill'>Explore Europe</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item interval={500}>
@@ -27,7 +27,7 @@ const Slider = () => {
                     />
                     <Carousel.Caption>
                         <h1>USA</h1>
-                        <Button>Explore America</Button>
+                        <Button variant='danger rounded-pill'>Explore America</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
                 <Carousel.Item>
@@ -38,7 +38,7 @@ const Slider = () => {
                     />
                     <Carousel.Caption>
                         <h1>ASIA</h1>
-                        <Button>Explore ASIA</Button>
+                        <Button variant='danger rounded-pill'>Explore ASIA</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
             </Carousel>
