@@ -1,0 +1,65 @@
+[
+    {
+        "id": 1,
+        "img": "https://i.ibb.co/R2Yhdbj/marathon.png",
+        "name": "Marathon Tour",
+        "price": 8000,
+        "description": "This package is designed for a long marathon type tour fot travel freek. Usually it last more than ONE Month and covers at least 3 countries. So many places to visit during this period. You will a huge variety of cultures, travelling vehicles, destination, tourist spots, historical places, cities, entertaining parks, Shoppings etc."
+    },
+    {
+        "id": 2,
+        "img": "https://i.ibb.co/b6yzkVR/discover.png",
+        "name": "Discover Tour",
+        "price": 1000,
+        "description": "The most misterious tour plan you have ever experienced. It is designed, so that we select destination where you have never been as well as you have a little idea about the destination. You will apprehence a new feelings & experience. Generally this tour period be 3 to 15 days based on your interest. It is fully customisable Tour Package."
+    },
+    {
+        "id": 3,
+        "img": "https://i.ibb.co/gDVjYvh/family.png",
+        "name": "Family Tour",
+        "price": 1000,
+        "description": "The Relaxation based tour package. You will be able to refresh your mind and body as well as collect some memorable memory with dearest persons. It last generally 3 days to 7 days. Tour period and destination may customisable."
+    },
+    {
+        "id": 4,
+        "img": "https://i.ibb.co/5BYScFw/hiking.png",
+        "name": "Hiking",
+        "price": 1000,
+        "description": "This package the apple of adventurous people eyes. You will love it if you have crave to adventure Mountains. For this package there are some health related conditions though. This tour usually last 3 days to 1 month or even more"
+    },
+    {
+        "id": 5,
+        "img": "https://i.ibb.co/vLvw0pH/short.png",
+        "name": "Short Tour",
+        "price": 500,
+        "description": "It is 1 to 3 days tour. Generally inside country or neibour country maximum. Many place to be visited as possible. It is not suitable for those who seek relaxation. The schedule also will be so hasty. But you will love it if you want to visit so many places within shortest possible period. "
+    },
+    {
+        "id": 6,
+        "img": "https://i.ibb.co/PQ2xhKm/day.png",
+        "name": "Day Tour",
+        "price": 300,
+        "description": "Generally it city or near city tour. There is no scope to go a long distance. You will definately pass a quality time and able to collect a lot of memory. It will refresh your mind definately. Suitable for all age and all professional people. Designed for family or corporate group."
+    },
+    {
+        "id": 7,
+        "img": "https://i.ibb.co/WpGhcFK/luxurious.png",
+        "name": "Luxurious Tour",
+        "price": 20000,
+        "description": "This package is designed for people who demand huge comfortness and a lot more relaxation. The period of this tour is totally customisable as well as destinations. Destination are dependant on five star hotel & Air travel availability. Helicopter hiring aslo available in this package."
+    },
+    {
+        "id": 8,
+        "img": "https://i.ibb.co/h8Fyw76/budget.png",
+        "name": "Budget Tour",
+        "price": 100,
+        "description": "Designed for middle class people like me (ha ha). But best package for touring from my point of view. This package will recall our root. It will make you nostalgic."
+    },
+    {
+        "id": 9,
+        "img": "https://i.ibb.co/hyRJH5P/historical.png",
+        "name": "Historical Places Visit",
+        "price": 1000,
+        "description": "History lover package and specially designed for study tour. You acquire a lot of knowledgefrom this tour. usually it is also a day package. But mostly for large group."
+    }
+]
