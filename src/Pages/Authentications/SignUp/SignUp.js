@@ -1,54 +1,58 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
-import './SignIn.css';
 import googleIcon from '../../../images/google.png';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, sendEmailVerification } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
-
-const SignIn = () => {
+const SignUp = () => {
     const navigate = useNavigate();
-    const [
-        signInWithEmailAndPassword,
-        user,
-        loading,
-        error,
-    ] = useSignInWithEmailAndPassword(auth);
 
-    const handleSignIn = e => {
+    const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
+
+    if (user) {
+        navigate('/')
+    }
+
+
+    const handleSignUp = e => {
         e.preventDefault();
+        const name = e.target.name.value;
         const email = e.target.email.value;
         const password = e.target.password.value;
-        signInWithEmailAndPassword(email, password)
-
-    }
-    if (user) {
-        navigate('/home')
+        createUserWithEmailAndPassword(email, password);
     }
 
     return (
         <div>
             <div id='sign-in' className=' login-container mx-auto my-2'>
-                <h2 className='text-center'>Sign In</h2>
-                <Form onSubmit={handleSignIn}>
+                <h2 className='text-center'>Sign Up</h2>
+                <Form onSubmit={handleSignUp}>
+                    <Form.Group className="mb-3" controlId="formBasicName">
+                        <Form.Label>Name</Form.Label>
+                        <Form.Control name='name' type="name" placeholder="Enter Name" required />
+                    </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>
                         <Form.Control name='email' type="email" placeholder="Enter email" required />
                     </Form.Group>
+
                     <Form.Group className="mb-3" controlId="formBasicPassword">
                         <Form.Label>Password</Form.Label>
                         <Form.Control name='password' type="password" placeholder="Password" required />
                     </Form.Group>
+                    <Form.Group className="mb-3" controlId="formBasicCheckbox">
+                        <Form.Check type="checkbox" label="Check me out" />
+                    </Form.Group>
                     <Button variant=" d-block mx-auto w-50 " type="submit">
-                        Sign In
+                        Sign Up Now
                     </Button>
                 </Form>
                 {error ? error.message : ''}
-                <p className='mt-4'>New to Travel With Elina?
+                <p className='mt-4'>Already Have an Account?
                     <span
-                        onClick={() => navigate('/sign-up')}
-                        className='btn btn-link text-decoration-none fw-bold'>Sign Up</span>
+                        onClick={() => navigate('/sign-in')}
+                        className='btn btn-link text-decoration-none fw-bold'>Sign In</span>
                 </p>
                 <div className='d-flex align-items-center my-4'>
                     <hr />
@@ -64,4 +68,4 @@ const SignIn = () => {
     );
 };
 
-export default SignIn;
+export default SignUp;

@@ -3,7 +3,7 @@ import { Button, Card } from 'react-bootstrap';
 
 const ServiceCard = ({ service }) => {
     const { name, img, description, price } = service;
-    console.log(service)
+
     return (
         <div className='col'>
             <Card className='h-100 card-container' style={{ width: '100%' }}>

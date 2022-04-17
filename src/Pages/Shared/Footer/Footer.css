@@ -8,3 +8,7 @@
 .footer-container button {
     color: rgba(255, 255, 255, 0.664);
 }
+
+.footer-container img {
+    height: 60px;
+}
