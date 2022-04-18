@@ -7,6 +7,7 @@ import { useNavigate } from 'react-router-dom';
 import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
+    //vanilla css is written SignIn.css for both SignIn.js and SignUp.js
 
     //first implemented email-pasword sign up, then google sign up
 

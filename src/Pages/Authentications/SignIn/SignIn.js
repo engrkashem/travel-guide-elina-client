@@ -11,6 +11,7 @@ import Loading from '../../Shared/Loading/Loading';
 
 
 const SignIn = () => {
+    //vanilla css is written SignIn.css for both SignIn.js and SignUp.js
 
     //first implemented email-pasword sign in, then google sign in
 
