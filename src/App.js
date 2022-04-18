@@ -1,7 +1,7 @@
 import './App.css';
 import { Route, Routes } from 'react-router-dom';
 import Home from './Pages/Home/Home/Home';
-import Blogs from './Pages/Blogs/Blogs';
+import Blogs from './Pages/Blogs/Blogs/Blogs';
 import About from './Pages/About/About/About';
 import SignIn from './Pages/Authentications/SignIn/SignIn';
 import NotFound from './Pages/Shared/NotFound/NotFound';
