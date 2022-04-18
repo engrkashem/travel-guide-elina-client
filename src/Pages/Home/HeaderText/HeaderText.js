@@ -1,6 +1,8 @@
 import React from 'react';
 
 const HeaderText = () => {
+    //vanilla css are used in Header.css file
+    //this components is for text & search box shown on banner
     return (
         <div className='header-text-container d-flex flex-column justify-content-around container'>
             <div className='text-start '>

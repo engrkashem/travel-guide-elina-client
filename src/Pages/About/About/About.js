@@ -2,6 +2,9 @@ import React from 'react';
 import profilePic from '../../../images/profile.jpg'
 
 const About = () => {
+
+    //this page is presented developer berief vision.
+
     return (
         <div className='p-5 bg-dark text-light'>
             <h1 className='text-center mt-5 opacity-75'>Developer Introduction</h1>

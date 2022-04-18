@@ -4,18 +4,27 @@ import googleIcon from '../../../images/google.png';
 import { useCreateUserWithEmailAndPassword, sendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
+import Loading from '../../Shared/Loading/Loading';
 
 const SignUp = () => {
+
+    //first implemented email-pasword sign up, then google sign up
+
+    // To Navigate to desired route
     const navigate = useNavigate();
 
+    //Email-password sign up/register react firebase hook
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
+    //Google sign in react firebase hook
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
+    //after sign up redirect the user to home
     if (user || gUser) {
         navigate('/')
     }
 
+    //error handle if any error happen
     let errorMessage;
     if (error) {
         errorMessage = error.message;
@@ -24,6 +33,12 @@ const SignUp = () => {
         errorMessage = gError.message;
     }
 
+    //loading spin is shown on UI
+    if (loading || gLoading) {
+        return <Loading></Loading>
+    }
+
+    //Email-password sign up/register
     const handleSignUp = e => {
         e.preventDefault();
         const name = e.target.name.value;
@@ -31,6 +46,7 @@ const SignUp = () => {
         const password = e.target.password.value;
         createUserWithEmailAndPassword(email, password);
     }
+
 
     return (
         <div>
@@ -69,7 +85,7 @@ const SignUp = () => {
                     <hr />
                 </div>
                 <div>
-                    <Button variant=" d-block mx-auto w-50 " type="submit" alt="" ><img height={'30px'}
+                    <Button onClick={() => signInWithGoogle()} variant=" d-block mx-auto w-50 " type="submit" alt="" ><img height={'30px'}
                         alt='' src={googleIcon} /> Google Sign In</Button>
                 </div>
             </div>

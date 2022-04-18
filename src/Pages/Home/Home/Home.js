@@ -5,6 +5,7 @@ import Slider from '../Slider/Slider';
 import './Home.css';
 
 const Home = () => {
+    //This is home page, only 3 components are added.
     return (
         <div>
             <Header></Header>

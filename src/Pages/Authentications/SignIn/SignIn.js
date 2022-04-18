@@ -11,12 +11,21 @@ import Loading from '../../Shared/Loading/Loading';
 
 
 const SignIn = () => {
+
+    //first implemented email-pasword sign in, then google sign in
+
+    //useRef() to get user input in respective field
     const emailRef = useRef('');
     const passwordRef = useRef('');
+
+    // To Navigate to desired route
     const navigate = useNavigate();
+
+    //To get user current route
     const location = useLocation();
     const from = location?.state?.from?.pathname || '/';
 
+    //Email-password sign in react firebase hook
     const [
         signInWithEmailAndPassword,
         user,
@@ -24,12 +33,13 @@ const SignIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    //Google sign in react firebase hook
     const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
 
-    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(
-        auth
-    );
+    //Password reset react firebase hook in case user forgot password.
+    const [sendPasswordResetEmail, sending] = useSendPasswordResetEmail(auth);
 
+    //error message shown in Ui
     let errorMessage;
     if (error) {
         errorMessage = error.message;
@@ -38,23 +48,26 @@ const SignIn = () => {
         errorMessage = gError.message;
     }
 
+    //Email-password sign in function
     const handleSignIn = e => {
         e.preventDefault();
         const email = emailRef.current.value;
         const password = passwordRef.current.value;
         signInWithEmailAndPassword(email, password)
-
     }
 
+    //Redirect the user to protected page after sign in
     if (user || gUser) {
         console.log(user?.user?.uid, gUser?.user?.uid)
         navigate(from, { replace: true });
     }
 
+    //Loading spin. 
     if (loading || gLoading || sending) {
         return <Loading></Loading>
     }
 
+    //reset password function. notificatio shown on UI using react toast
     const resetPassword = async () => {
         const email = emailRef.current.value;
         if (email) {
@@ -66,6 +79,7 @@ const SignIn = () => {
         }
 
     }
+
 
     return (
         <div>

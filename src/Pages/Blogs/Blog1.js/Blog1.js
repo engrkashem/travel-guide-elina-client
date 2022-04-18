@@ -2,6 +2,9 @@ import React from 'react';
 import { Table } from 'react-bootstrap';
 
 const Blog1 = () => {
+
+    //First question answer
+
     return (
         <Table striped bordered hover variant="dark opacity-75">
             <thead>

@@ -5,6 +5,7 @@ import america from '../../../images/america.png';
 import asia from '../../../images/asia.png';
 
 const Slider = () => {
+    //it is simply a carousel that showed in UI via Home component
     return (
         <div>
             <Carousel fade>

@@ -3,6 +3,13 @@ import useService from '../../../hooks/useService';
 import ServiceCard from '../Servicecard/ServiceCard';
 
 const Services = () => {
+    /*  
+    *here we fetched data using custom hook name useService() 
+        from service.json.
+     *service data is mapped and sen to serviceCard 
+        component to design service dat for UI */
+
+    // vanilla css is written in home.css file
 
     const [services] = useService();
 

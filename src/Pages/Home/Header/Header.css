@@ -1,3 +1,4 @@
+/* design for Header.js */
 .header-container {
     height: 600px;
     background-image: url('../../../images/background.jpg');
@@ -5,6 +6,7 @@
     background-size: 100% 100%;
 }
 
+/* design for HeaderText.js */
 .header-text-container {
     height: 80%;
 }

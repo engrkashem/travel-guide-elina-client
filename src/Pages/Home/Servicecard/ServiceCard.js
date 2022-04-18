@@ -3,6 +3,9 @@ import { Button, Card } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
 
 const ServiceCard = ({ service }) => {
+    /* put the data in bootstrap cart that received 
+        from Services.js  */
+
     const { name, img, description, price } = service;
     const navigate = useNavigate();
 

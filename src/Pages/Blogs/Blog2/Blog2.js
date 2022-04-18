@@ -1,6 +1,9 @@
 import React from 'react';
 
 const Blog2 = () => {
+
+    //Second Question answer
+
     return (
         <div className=' opacity-75'>
             <h6>The reasons behind using Firebase are given below-</h6>

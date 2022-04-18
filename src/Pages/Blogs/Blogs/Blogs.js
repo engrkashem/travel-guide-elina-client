@@ -4,6 +4,9 @@ import Blog2 from '../Blog2/Blog2';
 import Blog3 from '../Blog3/Blog3';
 
 const Blogs = () => {
+    //Blog are shown in UI
+    //deviden three part for three questions
+    //named Blo1.js, Blog2.js, Blog3.js
     return (
         <div className='pt-5 p-3 bg-dark text-white'>
             <h1 className='text-center mb-4 opacity-75'>Our Blogs</h1>
