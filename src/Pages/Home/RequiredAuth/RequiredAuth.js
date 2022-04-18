@@ -1,8 +1,8 @@
-import React, { Children } from 'react';
-import { Spinner } from 'react-bootstrap';
+import React from 'react';
 import { useAuthState } from 'react-firebase-hooks/auth';
 import { Navigate, useLocation } from 'react-router-dom';
 import auth from '../../../firebase.init';
+import Loading from '../../Shared/Loading/Loading';
 
 const RequiredAuth = ({ children }) => {
 
@@ -10,11 +10,7 @@ const RequiredAuth = ({ children }) => {
     let location = useLocation();
 
     if (loading) {
-        return <p>
-            <Spinner animation="border" variant="danger" />
-            <Spinner animation="border" variant="warning" />
-            <Spinner animation="border" variant="info" />
-        </p>
+        return <Loading></Loading>
     }
 
     if (!user) {
