@@ -19,7 +19,7 @@ const Slider = () => {
                         <Button variant='danger rounded-pill'>Explore Europe</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item interval={500}>
+                <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
                         src={america}
@@ -30,7 +30,7 @@ const Slider = () => {
                         <Button variant='danger rounded-pill'>Explore America</Button>
                     </Carousel.Caption>
                 </Carousel.Item>
-                <Carousel.Item>
+                <Carousel.Item interval={1000}>
                     <img
                         className="d-block w-100"
                         src={asia}

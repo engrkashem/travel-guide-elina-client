@@ -13,7 +13,7 @@ import RequiredAuth from './Pages/Authentications/RequiredAuth/RequiredAuth';
 
 function App() {
   return (
-    <div >
+    <div>
       <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
