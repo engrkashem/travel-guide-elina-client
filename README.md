@@ -30,4 +30,5 @@ This project is about a adventurous girl who guide tourist as well as offer tour
 ### <li>React Firebase Hooks</li>
 ### <li>React HeroIcon</li>
 ### <li>React Toastify</li>
+### <li>Analog Clock React</li>
 </ul>
