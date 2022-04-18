@@ -3,6 +3,7 @@ import { PhoneIcon, MailIcon, LocationMarkerIcon } from '@heroicons/react/solid'
 import { ArrowCircleUpIcon } from '@heroicons/react/outline';
 import logoDark from '../../../images/logo-dark.png';
 import './Footer.css'
+import { HashLink } from 'react-router-hash-link';
 
 
 const Footer = () => {
@@ -24,7 +25,9 @@ const Footer = () => {
             </div>
             <div className='d-flex align-items-center'>
                 <hr className='w-50' />
-                <ArrowCircleUpIcon height={'60PX'} />
+                <HashLink className='text-light opacity-50' to={'/home#header'}>
+                    <ArrowCircleUpIcon height={'60PX'} />
+                </HashLink>
                 <hr className='w-50' />
             </div>
             <div className='d-flex justify-content-around align-items-center'>
