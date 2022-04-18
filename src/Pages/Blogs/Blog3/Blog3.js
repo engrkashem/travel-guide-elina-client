@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog3 = () => {
     return (
-        <div>
+        <div className=' opacity-75'>
             <p>There are many Services Firebase provide except authenticaton which are listed below-</p>
             <ul>
                 <li>Hosting</li>

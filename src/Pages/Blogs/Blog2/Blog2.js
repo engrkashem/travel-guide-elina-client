@@ -2,7 +2,7 @@ import React from 'react';
 
 const Blog2 = () => {
     return (
-        <div>
+        <div className=' opacity-75'>
             <h6>The reasons behind using Firebase are given below-</h6>
             <p><b>Built-in Analytics:</b> It helps in understanding how user using the app which is very helpful in future optimization. </p>
             <p><b>Easy Development:</b> As the operations and internal functions are taken care of by the Firebase, So developers can spend more time on developping high quality app that the users desire to experience </p>

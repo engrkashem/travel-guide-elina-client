@@ -3,7 +3,7 @@ import { Table } from 'react-bootstrap';
 
 const Blog1 = () => {
     return (
-        <Table striped bordered hover variant="light">
+        <Table striped bordered hover variant="dark opacity-75">
             <thead>
                 <tr>
                     <th>SL </th>
