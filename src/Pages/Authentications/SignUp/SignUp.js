@@ -39,7 +39,7 @@ const SignUp = () => {
                 <Form onSubmit={handleSignUp}>
                     <Form.Group className="mb-3" controlId="formBasicName">
                         <Form.Label>Name</Form.Label>
-                        <Form.Control name='name' type="name" placeholder="Enter Name" required />
+                        <Form.Control name='name' type="name" placeholder="Enter Name" />
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="formBasicEmail">
                         <Form.Label>Email address</Form.Label>

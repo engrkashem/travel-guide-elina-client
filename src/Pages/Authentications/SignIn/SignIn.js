@@ -4,11 +4,14 @@ import './SignIn.css';
 import googleIcon from '../../../images/google.png';
 import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
-import { useNavigate } from 'react-router-dom';
+import { useLocation, useNavigate } from 'react-router-dom';
 
 
 const SignIn = () => {
     const navigate = useNavigate();
+    const location = useLocation();
+    const from = location?.state?.from?.pathname || '/';
+
     const [
         signInWithEmailAndPassword,
         user,
@@ -35,7 +38,8 @@ const SignIn = () => {
     }
 
     if (user || gUser) {
-        navigate('/home')
+        console.log(user?.user?.uid, gUser?.user?.uid)
+        navigate(from, { replace: true });
     }
 
     return (
