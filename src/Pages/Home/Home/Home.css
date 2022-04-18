@@ -9,3 +9,12 @@
 .card-container img {
     height: 300px;
 }
+
+/* Design for ChooseTour.js file */
+.choose-tour-container {
+    height: 500px;
+    margin-top: 1px;
+    background-image: url('../../../images/choose-tour-backgroung.jpg');
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
