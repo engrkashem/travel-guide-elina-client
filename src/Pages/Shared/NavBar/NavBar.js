@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Nav, Navbar } from 'react-bootstrap';
 import CustomLink from '../CustomLink/CustomLink';
-import './NavBar.css';
+import '../../../Styles/NavBar.css';
 import { Link } from 'react-router-dom';
 import logoDark from '../../../images/logo-dark.png'
 import auth from '../../../firebase.init';

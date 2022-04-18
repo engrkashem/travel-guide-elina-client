@@ -2,7 +2,7 @@ import React from 'react';
 import { PhoneIcon, MailIcon, LocationMarkerIcon } from '@heroicons/react/solid';
 import { ArrowCircleUpIcon } from '@heroicons/react/outline';
 import logoDark from '../../../images/logo-dark.png';
-import './Footer.css'
+import '../../../Styles/Footer.css';
 import { HashLink } from 'react-router-hash-link';
 
 

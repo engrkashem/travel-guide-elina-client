@@ -1,7 +1,7 @@
 /* design for Header.js */
 .header-container {
     height: 600px;
-    background-image: url('../../../images/banner-background.jpg');
+    background-image: url('../images/banner-background.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 }

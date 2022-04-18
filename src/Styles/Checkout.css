@@ -1,8 +1,9 @@
 /* style for checkout div in Checkout.js */
 .checkout-container {
     padding: 50px 5px;
+    margin: 0;
     height: 100%;
-    background-image: url('../../../images/check-out-background.jpg');
+    background-image: url('../images/check-out-background.jpg');
     background-repeat: no-repeat;
     background-size: 100% 100%;
 
@@ -49,7 +50,5 @@
 .service-details-card {
     background-color: rgba(176, 224, 230, 0.1);
     border-radius: 5px;
-    /* background-image: url('../../../images/check-out-background.jpg');
-    background-repeat: no-repeat;
-    background-size: 100% 100%; */
+
 }

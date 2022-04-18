@@ -3,12 +3,12 @@ import ChooseTour from '../ChooseTour/ChooseTour';
 import Header from '../Header/Header';
 import Services from '../Services/Services';
 import Slider from '../Slider/Slider';
-import './Home.css';
+import '../../../Styles/Home.css';
 
 const Home = () => {
     //This is home page, only 3 components are added.
     return (
-        <div>
+        <div className='home-container'>
             <Header></Header>
             <Services></Services>
             <Slider></Slider>

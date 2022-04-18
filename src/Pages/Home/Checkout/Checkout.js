@@ -3,7 +3,7 @@ import { useParams } from 'react-router-dom';
 import useService from '../../../hooks/useService';
 import FormHook from '../FormHook/FormHook';
 import ServiceDetails from '../ServiceDetails/ServiceDetails';
-import './Checkout.css'
+import '../../../Styles/Checkout.css'
 
 const Checkout = () => {
 

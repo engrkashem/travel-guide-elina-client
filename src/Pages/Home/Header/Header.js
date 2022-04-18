@@ -1,6 +1,6 @@
 import React from 'react';
 import HeaderText from '../../Home/HeaderText/HeaderText';
-import './Header.css';
+import '../../../Styles/Header.css';
 
 const Header = () => {
     //in header.css file all header design that is vanilla css are written.
