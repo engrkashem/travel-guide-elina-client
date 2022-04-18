@@ -10,12 +10,12 @@ import { signOut } from 'firebase/auth';
 
 
 const NavBar = () => {
-    const [user, loading, error] = useAuthState(auth);
+    const [user] = useAuthState(auth);
 
     return (
         <Navbar className='navbar-container' collapseOnSelect expand="lg" variant="dark">
             <Container >
-                <Navbar.Brand as={Link} to="/home">
+                <Navbar.Brand as={Link} to="/">
                     <img src={logoDark} alt="" />
                 </Navbar.Brand>
                 <Navbar.Toggle aria-controls="responsive-navbar-nav" />
@@ -23,6 +23,7 @@ const NavBar = () => {
                     <Nav className="me-auto">
                     </Nav>
                     <Nav >
+                        <Nav.Link as={CustomLink} to='/home' eventKey={2} >Home</Nav.Link>
                         <Nav.Link as={CustomLink} to='/blogs' eventKey={2} >Blogs</Nav.Link>
                         <Nav.Link as={CustomLink} to='/about' eventKey={2} >
                             About

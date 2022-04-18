@@ -5,14 +5,14 @@ import Blogs from './Pages/Blogs/Blogs';
 import About from './Pages/About/About/About';
 import SignIn from './Pages/Authentications/SignIn/SignIn';
 import NotFound from './Pages/Shared/NotFound/NotFound';
-import Header from './Pages/Shared/Header/Header';
 import Footer from './Pages/Shared/Footer/Footer';
 import SignUp from './Pages/Authentications/SignUp/SignUp';
+import NavBar from './Pages/Shared/NavBar/NavBar';
 
 function App() {
   return (
     <div >
-      <Header></Header>
+      <NavBar></NavBar>
       <Routes>
         <Route path='/' element={<Home />}></Route>
         <Route path='/home' element={<Home />}></Route>
