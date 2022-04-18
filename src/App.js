@@ -9,7 +9,7 @@ import Footer from './Pages/Shared/Footer/Footer';
 import SignUp from './Pages/Authentications/SignUp/SignUp';
 import NavBar from './Pages/Shared/NavBar/NavBar';
 import Checkout from './Pages/Home/Checkout/Checkout';
-import RequiredAuth from './Pages/Home/RequiredAuth/RequiredAuth';
+import RequiredAuth from './Pages/Authentications/RequiredAuth/RequiredAuth';
 
 function App() {
   return (
