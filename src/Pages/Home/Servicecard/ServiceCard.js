@@ -6,7 +6,7 @@ const ServiceCard = ({ service }) => {
     /* put the data in bootstrap cart that received 
         from Services.js  */
 
-    const { name, img, description, price } = service;
+    const { name, img, description, price, id } = service;
     const navigate = useNavigate();
 
     return (
@@ -22,7 +22,7 @@ const ServiceCard = ({ service }) => {
                     </div>
                     <div>
                         <h5>Price: Starts from <span className='fs-3 text-danger'>${price}+++</span></h5>
-                        <Button onClick={() => navigate('/checkout')} variant="danger">Proceed to Checkout</Button>
+                        <Button onClick={() => navigate(`/checkout/${id}`)} variant="danger">Proceed to Checkout</Button>
                     </div>
                 </Card.Body>
             </Card>

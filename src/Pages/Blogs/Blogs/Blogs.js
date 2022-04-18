@@ -8,7 +8,7 @@ const Blogs = () => {
     //deviden three part for three questions
     //named Blo1.js, Blog2.js, Blog3.js
     return (
-        <div className='pt-5 p-3 bg-dark text-white'>
+        <div className='pt-5 p-3 bg-dark  text-white'>
             <h1 className='text-center mb-4 opacity-75'>Our Blogs</h1>
             <div className="row row-cols-1 row-cols-md-2 row-cols-lg-3 g-4 ">
                 <div className="col">

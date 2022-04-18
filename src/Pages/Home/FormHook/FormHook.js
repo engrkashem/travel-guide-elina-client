@@ -4,6 +4,7 @@ import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 const FormHook = () => {
+
     //form for checkout page
 
     const { register, handleSubmit } = useForm();
@@ -12,12 +13,13 @@ const FormHook = () => {
         toast(`Congratulation Mr.${Name}, Address: ${Address}. Your Booking For Tour is Confirmed. Let's See in Pick up Place just in Time.`)
     };
 
-    // vanilla css is written in Checkout.css
+    // *****vanilla css is written in Checkout.css*****
+
     return (
         <div className='form-container'>
             <form className='form-component' onSubmit={handleSubmit(onSubmit)}>
-                <input type='text' {...register("Name")} placeholder='Name' />
-                <input type='text' {...register("Address")} placeholder='Address' />
+                <input type='text' {...register("Name", { required: true })} placeholder='Name' />
+                <input type='text' {...register("Address", { required: true })} placeholder='Address' />
                 <input type='text' {...register("Phone Number", { required: true })} placeholder='Phone Number' />
                 <select className='p-1 rounded options' {...register("Gender")}>
                     <option value="female">Female</option>

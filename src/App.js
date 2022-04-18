@@ -27,6 +27,7 @@ function App() {
             <Checkout />
           </RequiredAuth>
         }></Route>
+        <Route path="/checkout/:serviceId" element={<Checkout />}></Route>
         <Route path='*' element={<NotFound />}></Route>
       </Routes>
       <Footer></Footer>
