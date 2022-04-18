@@ -2,7 +2,7 @@ import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import './SignIn.css';
 import googleIcon from '../../../images/google.png';
-import { useSignInWithEmailAndPassword } from 'react-firebase-hooks/auth';
+import { useSignInWithEmailAndPassword, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
@@ -16,6 +16,16 @@ const SignIn = () => {
         error,
     ] = useSignInWithEmailAndPassword(auth);
 
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+    let errorMessage;
+    if (error) {
+        errorMessage = error.message;
+    }
+    else if (gError) {
+        errorMessage = gError.message;
+    }
+
     const handleSignIn = e => {
         e.preventDefault();
         const email = e.target.email.value;
@@ -23,7 +33,8 @@ const SignIn = () => {
         signInWithEmailAndPassword(email, password)
 
     }
-    if (user) {
+
+    if (user || gUser) {
         navigate('/home')
     }
 
@@ -44,7 +55,7 @@ const SignIn = () => {
                         Sign In
                     </Button>
                 </Form>
-                {error ? error.message : ''}
+                <p className='mt-3 text-danger fw-bold'>{errorMessage}</p>
                 <p className='mt-4'>New to Travel With Elina?
                     <span
                         onClick={() => navigate('/sign-up')}
@@ -56,7 +67,7 @@ const SignIn = () => {
                     <hr />
                 </div>
                 <div>
-                    <Button variant=" d-block mx-auto w-50 " type="submit" alt="" ><img height={'30px'}
+                    <Button onClick={() => signInWithGoogle()} variant=" d-block mx-auto w-50 " type="submit" alt="" ><img height={'30px'}
                         alt='' src={googleIcon} /> Google Sign In</Button>
                 </div>
             </div>

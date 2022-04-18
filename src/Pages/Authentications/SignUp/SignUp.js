@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Form } from 'react-bootstrap';
 import googleIcon from '../../../images/google.png';
-import { useCreateUserWithEmailAndPassword, sendEmailVerification } from 'react-firebase-hooks/auth';
+import { useCreateUserWithEmailAndPassword, sendEmailVerification, useSignInWithGoogle } from 'react-firebase-hooks/auth';
 import auth from '../../../firebase.init';
 import { useNavigate } from 'react-router-dom';
 
@@ -10,10 +10,19 @@ const SignUp = () => {
 
     const [createUserWithEmailAndPassword, user, loading, error] = useCreateUserWithEmailAndPassword(auth, { sendEmailVerification: true });
 
-    if (user) {
+    const [signInWithGoogle, gUser, gLoading, gError] = useSignInWithGoogle(auth);
+
+    if (user || gUser) {
         navigate('/')
     }
 
+    let errorMessage;
+    if (error) {
+        errorMessage = error.message;
+    }
+    else if (gError) {
+        errorMessage = gError.message;
+    }
 
     const handleSignUp = e => {
         e.preventDefault();
@@ -48,7 +57,7 @@ const SignUp = () => {
                         Sign Up Now
                     </Button>
                 </Form>
-                {error ? error.message : ''}
+                <p className='mt-3 text-danger'>{errorMessage}</p>
                 <p className='mt-4'>Already Have an Account?
                     <span
                         onClick={() => navigate('/sign-in')}
